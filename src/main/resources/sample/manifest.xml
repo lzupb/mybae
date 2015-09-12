@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mediapackage duration="2852076"
+	id="39e036f7-a291-401c-8236-979f7238ec9f" start="2015-06-30T08:55:40">
+	<media>
+		<track id="track-0" type="presentation/source">
+			<mimetype>video/mp4</mimetype>
+			<url>video.mp4</url>
+			<duration>2852076</duration>
+		</track>
+		<track id="track-1" type="presenter/source">
+			<mimetype>audio/mp3</mimetype>
+			<url>sound.ogg</url>
+			<duration>2852076</duration>
+		</track>
+	</media>
+	<metadata>
+		<catalog id="catalog-0" type="dublincore/episode">
+			<mimetype>text/xml</mimetype>
+			<url>episode.xml</url>
+		</catalog>
+	</metadata>
+	<attachments />
+</mediapackage>
