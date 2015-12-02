@@ -7,8 +7,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.baidu.livecast.model.IpDictBean;
-import com.baidu.livecast.service.IpDictService;
+import com.baidu.mywork.model.IpDictBean;
+import com.baidu.mywork.service.IpDictService;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)

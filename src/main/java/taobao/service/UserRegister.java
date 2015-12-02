@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.baidu.livecast.util.MySQLDB;
-import com.baidu.livecast.util.SpringContextUtil;
+import com.baidu.mywork.util.MySQLDB;
+import com.baidu.mywork.util.SpringContextUtil;
 import com.taobao.api.request.TmcUserPermitRequest;
 
 

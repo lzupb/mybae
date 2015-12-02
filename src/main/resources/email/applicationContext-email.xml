@@ -6,12 +6,12 @@
 	<description>Email配置</description>
 
 	<!-- 文本邮件服务类 -->
-	<bean id="simpleMailService" class="com.baidu.livecast.util.SimpleMailService">
+	<bean id="simpleMailService" class="com.baidu.mywork.util.SimpleMailService">
 		<property name="mailSender" ref="mailSender" />	
 	</bean>
 
 	<!-- MIME邮件服务类 -->
-	<bean id="mimeMailService" class="com.baidu.livecast.util.MimeMailService">
+	<bean id="mimeMailService" class="com.baidu.mywork.util.MimeMailService">
 		<property name="mailSender" ref="mailSender" />
 		<property name="freemarkerConfiguration" ref="freemarkerConfiguration" />
 	</bean>

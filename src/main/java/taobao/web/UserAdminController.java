@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.baidu.livecast.util.MySQLDB;
-import com.baidu.livecast.util.SpringContextUtil;
+import com.baidu.mywork.util.MySQLDB;
+import com.baidu.mywork.util.SpringContextUtil;
 
 
 /**

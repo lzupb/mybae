@@ -14,7 +14,7 @@
 
 	<description>Spring公共配置 </description>		
 	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入 -->
-	<context:component-scan base-package="com.baidu.livecast">
+	<context:component-scan base-package="com.baidu.mywork">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 
@@ -22,7 +22,7 @@
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"> 
 		<property name="dataSource" ref="dataSource"/>
 		<property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"/>
-		<property name="packagesToScan" value="com.baidu.livecast"/>
+		<property name="packagesToScan" value="com.baidu.mywork"/>
 		<property name="jpaProperties">
 			<props>
 				<!-- 命名规则 My_NAME->MyName -->
@@ -37,7 +37,7 @@
 	</bean>
 
 	<!-- Spring Data Jpa配置 -->
- 	<jpa:repositories base-package="com.baidu.livecast"  transaction-manager-ref="transactionManager" entity-manager-factory-ref="entityManagerFactory"/>
+ 	<jpa:repositories base-package="com.baidu.mywork"  transaction-manager-ref="transactionManager" entity-manager-factory-ref="entityManagerFactory"/>
    
 	<!-- Jpa 事务配置 -->
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
@@ -49,7 +49,7 @@
 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
 
 	<!-- 统一异常处理 -->
-	<bean id="exceptionResolver" class="com.baidu.livecast.util.DefaultExceptionHandler">
+	<bean id="exceptionResolver" class="com.baidu.mywork.util.DefaultExceptionHandler">
 		<property name="mailService" ref="simpleMailService"/>
 		<property name="emailFrom" value="neiwang_dev@baidu.com"/>		
 		<property name="emailReceive" value="pengbo01@baidu.com"/>	
@@ -57,7 +57,7 @@
 	</bean>		
 	
 	 <!-- spring上下文工具类 -->	
-	 <bean id="springContextUtil" class="com.baidu.livecast.util.SpringContextUtil" lazy-init ="false"/>
+	 <bean id="springContextUtil" class="com.baidu.mywork.util.SpringContextUtil" lazy-init ="false"/>
 	 
 	<!-- JSR303 Validator定义 -->
  	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />

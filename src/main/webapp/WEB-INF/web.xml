@@ -22,6 +22,9 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	<listener>
+		<listener-class>com.baidu.mywork.context.ContextLoaderListener</listener-class>
+	</listener>
 
 	<filter>
 		<filter-name>encodingFilter</filter-name>
@@ -42,7 +45,7 @@
 
 	<filter>
 		<filter-name>systemFilter</filter-name>
-		<filter-class>com.baidu.livecast.util.SystemFilter</filter-class>
+		<filter-class>com.baidu.mywork.util.SystemFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>systemFilter</filter-name>

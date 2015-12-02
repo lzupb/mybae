@@ -4,11 +4,11 @@
 
 	<description>导入自定义的applicationContext文件列表</description>	
 	  
-	<import resource="email/applicationContext-email.xml" />	
+	<import resource="email/applicationContext-email.xml" />
+	<import resource="aop/applicationContext-aop.xml" />	
 	<!--
 	<import resource="nosql/applicationContext-mongo.xml" />
-	<import resource="nosql/applicationContext-redis.xml" />
-	<import resource="aop/applicationContext-aop.xml" />
+	<import resource="nosql/applicationContext-redis.xml" />	
 	<import resource="cxf/portal-applicationContext-cxf-server.xml"/>
 	-->
 </beans>

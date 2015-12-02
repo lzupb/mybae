@@ -19,7 +19,7 @@ public class Dom4jSample {
 			// "<members> <member>sitinspring</member> </members>";
 			// Document simpledocument = DocumentHelper.parseText(text);
 
-			Resource resource = new ClassPathResource("/sample/manifest.xml");
+			Resource resource = new ClassPathResource("/sample/galicaster.xml");
 			SAXReader reader = new SAXReader();
 			Document doc = reader.read(resource.getFile());
 			// Element rootElm = doc.getRootElement();
@@ -38,6 +38,25 @@ public class Dom4jSample {
 						System.out.println(mimeType);
 						String fileName = node.element("url").getTextTrim();
 						System.out.println(fileName);
+						return;
+
+					}
+
+					if (node.getName().equals("property")) {
+						String videoProperty = node.attributeValue("name");
+						if (videoProperty != null
+								&& videoProperty.equals("som")) {
+							String som = node.getTextTrim();
+							System.out.println("som:" + som);
+							return;
+						}
+
+						if (videoProperty != null
+								&& videoProperty.equals("eom")) {
+							String eom = node.getTextTrim();
+							System.out.println("eom:" + eom);
+							return;
+						}
 
 					}
 				}
