@@ -5,7 +5,7 @@
 	version="3.0" metadata-complete="true">
 	<display-name>Archetype Created Web Application</display-name>
 	<description>
-		zhibo live web
+		test web
 	</description>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -63,7 +63,17 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springServlet</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/ss/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>WeixinServlet</servlet-name>
+		<servlet-class>weixin.WeiXinBaseServlet</servlet-class>		
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WeixinServlet</servlet-name>
+		<url-pattern>/wx/*</url-pattern>
 	</servlet-mapping>
 
 	<jsp-config>
