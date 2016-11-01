@@ -6,6 +6,17 @@ import java.net.SocketException;
 import java.net.UnknownHostException;
 
 public class LocalMac {
+	
+	private static boolean ready;   
+	private static int number;    
+	
+	private static class ReaderThread extends Thread {        
+		public void run() {          
+			while (!ready)               
+				Thread.yield();
+			System.out.println(number);
+			}    
+		}
 
 	/**
 	 * @param args
@@ -14,12 +25,15 @@ public class LocalMac {
 	 */
 	public static void main(String[] args) throws UnknownHostException,
 			SocketException {
+		new ReaderThread().start();      
+		number = 42;       
+		ready = true;
 
 		// 得到IP，输出PC-201309011313/122.206.73.83
-		InetAddress ia = InetAddress.getLocalHost();
-		System.out.println(ia);
-		getLocalMac(ia);
-		getAllLocalHostIP();
+//		InetAddress ia = InetAddress.getLocalHost();
+//		System.out.println(ia);
+//		getLocalMac(ia);
+//		getAllLocalHostIP();
 	}
 
 	private static void getLocalMac(InetAddress ia) throws SocketException {
